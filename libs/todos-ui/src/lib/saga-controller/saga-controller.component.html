@@ -1,0 +1,7 @@
+<div>
+  <h1>Saga {{ sagaId }}</h1>
+  {{ saga$ | async | json }}
+  <button (click)="makeApiCallOne()">Api Call One</button>
+  <button (click)="makeApiCallTwo()">Api Call Two</button>
+  <button (click)="finish()">Finish</button>
+</div>

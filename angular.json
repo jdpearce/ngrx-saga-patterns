@@ -142,6 +142,56 @@
           }
         }
       }
+    },
+    "todos-data-access": {
+      "projectType": "library",
+      "root": "libs/todos-data-access",
+      "sourceRoot": "libs/todos-data-access/src",
+      "prefix": "ngrx-saga-patterns",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/todos-data-access/src/**/*.ts",
+              "libs/todos-data-access/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/todos-data-access"],
+          "options": {
+            "jestConfig": "libs/todos-data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "todos-ui": {
+      "projectType": "library",
+      "root": "libs/todos-ui",
+      "sourceRoot": "libs/todos-ui/src",
+      "prefix": "ngrx-saga-patterns",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/todos-ui/src/**/*.ts",
+              "libs/todos-ui/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/todos-ui"],
+          "options": {
+            "jestConfig": "libs/todos-ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

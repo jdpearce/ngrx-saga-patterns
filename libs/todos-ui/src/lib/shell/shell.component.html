@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="start-controls">
+    <button (click)="startSaga()">Start Saga</button>
+
+    <ul *ngIf="log$ | async as log">
+      <li *ngFor="let logItem of log; trackBy: $index">{{ logItem }}</li>
+    </ul>
+  </div>
+
+  <div class="saga-controls">
+    <ngrx-saga-patterns-saga-controller
+      *ngFor="let saga of sagas$ | async"
+      [sagaId]="saga.id"
+    >
+    </ngrx-saga-patterns-saga-controller>
+  </div>
+</div>

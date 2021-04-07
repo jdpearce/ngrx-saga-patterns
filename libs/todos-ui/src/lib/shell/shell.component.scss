@@ -1,0 +1,15 @@
+.log {
+  font-family: monospace;
+}
+
+.container {
+  display: flex;
+
+  .start-controls {
+    flex: 1 0 auto;
+  }
+
+  .saga-controls {
+    flex: 1 0 auto;
+  }
+}
